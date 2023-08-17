@@ -1,0 +1,81 @@
+.section-5 {
+    display: flex;
+    justify-content: center;
+}
+.section-5 .s5-right{
+  padding: 0% 10% !important;
+}
+.section-5 .block-title{
+  margin-top: 35px !important;
+}
+.section-5 .s5-sub-title{
+  margin-bottom: 15px !important;
+}
+.section-5 .contacts-line{
+  margin-bottom: 25px !important;
+}
+.s5-left{
+    display: flex;
+    width: 800px;
+    position: relative;
+  }
+  .s5-left img{
+    max-width: 100%;
+  }
+.contentImg{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+.clickleft, .clickright{
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+.clickleft{
+    left: 35px;
+    transform:rotate(135deg);
+    transition: .3s;
+}
+.clickright{
+    right: 35px;
+    transform:rotate(315deg);
+    transition: .3s;
+}
+.clickleft:hover,
+.clickright:hover{
+    transform: translateX(5px);
+}
+.indicators{
+    position: absolute;
+    height: 40px;
+    bottom: 25px;
+    left:0;
+    right: 0;
+}
+.indicators ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.indicatorsToche{
+    margin: auto 3px;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    transition: .3s;
+}
+.activeIndicator{
+    width: 20px;
+    height: 20px;
+    background: #EA5E29;
+}
