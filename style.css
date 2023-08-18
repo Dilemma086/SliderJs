@@ -1,0 +1,83 @@
+.section-sliderBlock {
+    display: flex;
+    justify-content: center;
+   
+}
+.blockSliderMain{
+    display: flex;
+    width: 800px;
+    position: relative;
+  }
+.blockSliderMain img{
+  max-width: 100%;
+}
+.contentImg{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+.clickright{
+    position: absolute;
+    top: 45%;
+    right: 35px;
+   
+    z-index: 1;
+    background-image: url(../images/next.png);
+    
+    background-size: 50px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .3s;
+    height: 50px;
+    width: 50px;
+}
+.clickleft{
+  position: absolute;
+  top: 45%;
+  left: 35px;
+  z-index: 1;
+  background-image: url(/images/prev.png);
+  /* filter: invert(1); */
+  background-size: 50px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: .3s;
+  height: 50px;
+  width: 50px;
+}
+
+.clickright:hover{
+    transform: translateX(10px);
+}
+.clickleft:hover{
+  transform: translateX(-10px);
+}
+.indicators{
+    position: absolute;
+    height: 40px;
+    bottom: 25px;
+    left:0;
+    right: 0;
+}
+.indicators ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.indicatorsToche{
+    margin: auto 3px;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    transition: .3s;
+}
+.activeIndicator{
+    width: 20px;
+    height: 20px;
+    background: #EA5E29;
+}
