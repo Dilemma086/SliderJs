@@ -1,16 +1,50 @@
 if(document.querySelector('.contentImg') != null){
+    const data = {
+        'height' : "510px",
+        'width' : "1024px",
+        'timeMove': "111000",
+        'radiusLi' : "5px",
+        'paddingLi' : "10px"
+    }
+    let ulBlock = document.querySelector('.ulBlock')
+
     let contImg = document.querySelector('.contentImg')
     let widthCont = contImg.clientWidth
     let _image = Array.from(document.querySelectorAll('.sliderMainBottom'));
-    let _left = document.querySelector('.left_s5')
-    let _right = document.querySelector('.right_s5')
+    let _left = document.querySelector('.left_blockSliderMain')
+    let _right = document.querySelector('.right_blockSliderMain')
+    _image.forEach((item, i) => {
+        
+        
+        if(i==0){
+            const li = document.createElement('li')
+            li.classList.add('indicatorsToche')
+            li.classList.add('activeIndicator')
+            ulBlock.append(li)
+        }
+        else{
+            const li = document.createElement('li')
+            li.classList.add('indicatorsToche')
+            ulBlock.append(li)
+        }
+        
+    })
+
     let _indicatorsArr = Array.from(document.querySelectorAll('.indicatorsToche'));
 
+    const blockChildSsection = document.querySelector('.blockSliderMain')
+        blockChildSsection.style.height = data.height
+        blockChildSsection.style.width = data.width
+    _indicatorsArr.map(item => {
+        item.style.height = data.radiusLi
+        item.style.width = data.radiusLi
+        item.style.marginRight = data.paddingLi
+    })
+
     let count = 0 
-    console.log(widthCont);
+  
     const scrollImg = (countCard) => {
         contImg.scroll({top:0,left:countCard * widthCont, behavior:"smooth"})
-        
     }
 
     const indicatorChange = (indictNum) => {
@@ -41,5 +75,5 @@ if(document.querySelector('.contentImg') != null){
         scrollImg(count)
         _indicatorsArr.map(item => item.classList.remove('activeIndicator'))
         _indicatorsArr[count].classList.add('activeIndicator')
-    }, 8000)
+    }, data.timeMove)
 }

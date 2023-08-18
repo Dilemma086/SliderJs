@@ -1,55 +1,57 @@
-.section-5 {
+.section-sliderBlock {
     display: flex;
     justify-content: center;
+   
 }
-.section-5 .s5-right{
-  padding: 0% 10% !important;
-}
-.section-5 .block-title{
-  margin-top: 35px !important;
-}
-.section-5 .s5-sub-title{
-  margin-bottom: 15px !important;
-}
-.section-5 .contacts-line{
-  margin-bottom: 25px !important;
-}
-.s5-left{
+.blockSliderMain{
     display: flex;
     width: 800px;
     position: relative;
   }
-  .s5-left img{
-    max-width: 100%;
-  }
+.blockSliderMain img{
+  max-width: 100%;
+}
 .contentImg{
     display: flex;
     width: 100%;
     overflow: hidden;
   }
-.clickleft, .clickright{
+
+.clickright{
     position: absolute;
     top: 45%;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
+    right: 35px;
+   
     z-index: 1;
-    border-right: 3px solid #fff;
-    border-bottom: 3px solid #fff;
+    background-image: url(../images/next.png);
+    
+    background-size: 50px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .3s;
+    height: 50px;
+    width: 50px;
 }
 .clickleft{
-    left: 35px;
-    transform:rotate(135deg);
-    transition: .3s;
+  position: absolute;
+  top: 45%;
+  left: 35px;
+  z-index: 1;
+  background-image: url(/images/prev.png);
+  /* filter: invert(1); */
+  background-size: 50px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: .3s;
+  height: 50px;
+  width: 50px;
 }
-.clickright{
-    right: 35px;
-    transform:rotate(315deg);
-    transition: .3s;
-}
-.clickleft:hover,
+
 .clickright:hover{
-    transform: translateX(5px);
+    transform: translateX(10px);
+}
+.clickleft:hover{
+  transform: translateX(-10px);
 }
 .indicators{
     position: absolute;
