@@ -5,7 +5,6 @@
 }
 .blockSliderMain{
     display: flex;
-    width: 800px;
     position: relative;
   }
 .blockSliderMain img{
@@ -21,10 +20,8 @@
     position: absolute;
     top: 45%;
     right: 35px;
-   
     z-index: 1;
-    background-image: url(../images/next.png);
-    
+    background-image: url(/images/next.png);
     background-size: 50px;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -38,7 +35,6 @@
   left: 35px;
   z-index: 1;
   background-image: url(/images/prev.png);
-  /* filter: invert(1); */
   background-size: 50px;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -55,10 +51,10 @@
 }
 .indicators{
     position: absolute;
-    height: 40px;
-    bottom: 25px;
+    bottom: -40px;
     left:0;
     right: 0;
+    background-color: #090907;
 }
 .indicators ul{
     display: flex;

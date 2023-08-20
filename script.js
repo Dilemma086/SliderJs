@@ -1,15 +1,15 @@
 if(document.querySelector('.contentImg') != null){
     const data = {
         'height' : "510px",
-        'width' : "1024px",
-        'timeMove': "111000",
+        'width' : "1024",
+        'timeMove': "5000",
         'radiusLi' : "5px",
         'paddingLi' : "10px"
     }
     let ulBlock = document.querySelector('.ulBlock')
 
     let contImg = document.querySelector('.contentImg')
-    let widthCont = contImg.clientWidth
+    // let widthCont = contImg.clientWidth
     let _image = Array.from(document.querySelectorAll('.sliderMainBottom'));
     let _left = document.querySelector('.left_blockSliderMain')
     let _right = document.querySelector('.right_blockSliderMain')
@@ -27,14 +27,14 @@ if(document.querySelector('.contentImg') != null){
             li.classList.add('indicatorsToche')
             ulBlock.append(li)
         }
-        
+    
     })
 
     let _indicatorsArr = Array.from(document.querySelectorAll('.indicatorsToche'));
 
     const blockChildSsection = document.querySelector('.blockSliderMain')
         blockChildSsection.style.height = data.height
-        blockChildSsection.style.width = data.width
+        blockChildSsection.style.width = data.width+'px'
     _indicatorsArr.map(item => {
         item.style.height = data.radiusLi
         item.style.width = data.radiusLi
@@ -44,7 +44,7 @@ if(document.querySelector('.contentImg') != null){
     let count = 0 
   
     const scrollImg = (countCard) => {
-        contImg.scroll({top:0,left:countCard * widthCont, behavior:"smooth"})
+        contImg.scroll({top:0,left:countCard * data.width, behavior:"smooth"})
     }
 
     const indicatorChange = (indictNum) => {
