@@ -84,5 +84,13 @@ if(document.querySelector('.contentImg') != null){
             _indicatorsArr[count].classList.add('activeIndicator')
         }, data.timeMove)
     } 
-    interval()     
+    interval() 
+    
+    const hadleStart = (event) =>{
+        console.log(event.value + 'px');
+    }
+    _image.forEach(item => {
+        item.addEventListener('touchstart', hadleStart)
+    })
+    
 }
