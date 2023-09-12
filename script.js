@@ -95,7 +95,7 @@ if(document.querySelector('.contentImg') != null){
     let xDown = null;                                                        
     let yDown = null;                                                        
 
-    function handleTouchStart(evt) {                                         
+    function handleTouchStart(evt) { 
         xDown = evt.touches[0].clientX;                                      
         yDown = evt.touches[0].clientY;                                      
     };                                                
